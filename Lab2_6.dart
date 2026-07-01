@@ -1,22 +1,22 @@
-void greet(String name) {
-  print('Hello, $name!');
+void executeOperation(String name, double a, double b, double Function(double, double) operation) {
+  var result = operation(a, b);
+  print('Result for $name: $result');
 }
 
-int multiply(int a, int b) => a * b;
+double cylinder(double r, double h) {
+  return (22/7*(r*r))*h;
+}
 
-double calculateArea({required double width, required double height}) {
-  return width * height;
+double triangle(double b, double h) {
+  return 1/2 * (b*h);
+}
+
+double square(double x, double y) {
+  return x * y;
 }
 
 void main() {
-  greet('World');
-
-  int product = multiply(7, 6);
-  print('20 * 20 * 20 * 7 = $product');
-
-  double area = calculateArea(width: 123.0, height: 4.56);
-  print('Area (123 x 4.56) = $area');
-
-  double area2 = calculateArea(height: 789.0, width: 1.23);
-  print('Area (789 x 1.23 = $area2');
+  executeOperation('cylinder', 3, 5, cylinder);
+  executeOperation('triangle', 7, 5, triangle);
+  executeOperation('square', 5, 5, square);
 }
