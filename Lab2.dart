@@ -1,7 +1,5 @@
-
 void main() {
-  // List
-  List<String> subjects = ['MAth', 'Physics', 'English'];
+  List<String> subjects = ['Math', 'Physics', 'English'];
   print('Total of subjects: ${subjects.length}');
   print('First subject: ${subjects[0]}');
   print('Last subject: ${subjects[subjects.length - 1]}');
@@ -11,7 +9,6 @@ void main() {
 
   print('---');
 
-  // Map
   Map<String, int> studentScores = {
     'Thai Language': 85,
     'History': 78,
@@ -20,7 +17,6 @@ void main() {
 
   studentScores['Intro to Programming'] = 92;
   print('Updated scores: $studentScores');
-  print('All subjects in map: ${studentScores.keys}');
-  print('All scores in map: ${studentScores.values}');
+  print('All subjects (Map): ${studentScores.keys}');
+  print('All scores (Map): ${studentScores.values}');
 }
-
