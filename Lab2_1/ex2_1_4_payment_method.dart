@@ -40,7 +40,7 @@ void main() {
   List<PaymentMethod> payments = [
     CreditCard('1234-5678-9012-3456', 'Nobita Doraemon'),
     PromptPay('081-234-5678'),
-    CashOnDelivery('99/9 Road, Bangkok'),
+    CashOnDelivery('99/9 Road, Jurassic'),
   ];
 
   for (var payment in payments) {
